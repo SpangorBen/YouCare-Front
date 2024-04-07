@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+:root {
+  --black: #212429;
+  --dark: #371F11;
+  --main: #A0643D;
+  --white: #FAFAFA;
+  --light-grey: #ECF0F1;
+  --grey: #BDC3C7;
+  --side: #99BED0;
+}

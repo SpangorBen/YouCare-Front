@@ -1,42 +1,189 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+#login-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='700' preserveAspectRatio='none' viewBox='0 0 1440 700'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1017%26quot%3b)' fill='none'%3e%3crect width='1440' height='700' x='0' y='0' fill='rgba(250%2c 250%2c 250%2c 1)'%3e%3c/rect%3e%3cpath d='M921.59-124.54C778.71-82.03 744.36 315.05 528.13 323.5 311.89 331.95 331.4 236 134.66 236-62.07 236-158.03 322.97-258.8 323.5' stroke='rgba(160%2c 100%2c 61%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1344.27-88.15C1197.46-70.47 1113.63 257.07 865.66 259.37 617.7 261.67 626.36 171.87 387.06 171.87 147.75 171.87 30.08 259.01-91.55 259.37' stroke='rgba(160%2c 100%2c 61%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M833.34-28.24C625.19 41.46 572.68 644.28 276.36 650.53-19.96 656.78-125.72 384.74-280.62 377.53' stroke='rgba(160%2c 100%2c 61%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M823.21-10.86C680.41 106.02 765.04 657.68 524.01 663.94 282.98 670.2 95.2 351.95-74.39 341.94' stroke='rgba(160%2c 100%2c 61%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1249.93-37.95C1043.96-17.28 910.26 422.42 562.16 423.08 214.05 423.74 56.87 181.7-125.62 178.08' stroke='rgba(160%2c 100%2c 61%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1017'%3e%3crect width='1440' height='700' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");  background-position: center;
+  background-size: cover;
+}
+
+#signup-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='700' preserveAspectRatio='none' viewBox='0 0 1440 700'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1037%26quot%3b)' fill='none'%3e%3crect width='1440' height='700' x='0' y='0' fill='rgba(250%2c 250%2c 250%2c 1)'%3e%3c/rect%3e%3cpath d='M-204.97 506.54C-34.13 503.07 108.32 273.66 438.32 275.54 768.31 277.42 876.32 769.64 1081.6 801.69' stroke='rgba(160%2c 100%2c 61%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-10.58 384.21C99.61 381.37 171.27 212.38 399.88 223.21 628.5 234.04 648.63 722.97 810.35 789.39' stroke='rgba(160%2c 100%2c 61%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-33.68 57.16C83.03 68.55 105.65 274.79 357.38 316.16 609.11 357.53 613.08 680.04 748.44 712.57' stroke='rgba(160%2c 100%2c 61%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-77.46 265.84C82.66 261.87 201.25 27.64 520.11 34.84 838.98 42.04 901.11 648.28 1117.69 712.19' stroke='rgba(160%2c 100%2c 61%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-6.77 272.9C120.62 268.1 197.09 49.23 457.89 62.9 718.7 76.57 734.01 663.68 922.56 750' stroke='rgba(160%2c 100%2c 61%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1037'%3e%3crect width='1440' height='700' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");  background-position: center;
+  background-size: cover;
+}
+
+.back {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: var(--main);
+  border-radius: 200px;
+  width: 50px;
+  height: 50px;
+  color: var(--white);
+  padding: 10px 14px;
+  letter-spacing: 2px;
+  font-size: 24px;
+}
+
+#signup-body .form-container {
+  position: relative;
+  width: 480px;
+  height: fit-content;
+  border-radius: 0.75rem;
+  background-color: var(--white);
   padding: 2rem;
+  color: var(--black);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+#login-body .form-container {
+  width: 480px;
+  height: fit-content;
+  border-radius: 0.75rem;
+  background-color: var(--white);
+  padding: 2rem;
+  color: var(--black);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.remember {
+  display: flex;
+  gap: 3px;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0px;
+}
+
+.log-title {
   text-align: center;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: var(--dark);
+  gap: 1px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.input-group {
+  margin: 25px 0px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-group label {
+  display: block;
+  color: var(--black);
+  margin-bottom: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.input-group input:not([type="checkbox"]) {
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid var(--grey);
+  outline: 0;
+  background-color: var(--white);
+  padding: 0.75rem 1rem;
+  color: var(--black);
 }
 
-.card {
-  padding: 2em;
+.input-group input:focus,
+.input-group select:focus {
+  border-color: var(--main);
 }
 
-.read-the-docs {
-  color: #888;
+.input-group select {
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid var(--grey);
+  outline: 0;
+  background-color: var(--white);
+  padding: 10px;
+  color: var(--black);
+}
+
+.forgot a,
+.signup a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot a:hover,
+.signup a:hover {
+  text-decoration: underline var(--main);
+}
+
+.sign {
+  display: block;
+  width: 100%;
+  background-color: var(--main);
+  padding: 0.75rem;
+  text-align: center;
+  color: var(--white);
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+.social-message {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.line {
+  height: 1px;
+  flex: 1 1 0%;
+  background-color: var(--dark);
+}
+
+.social-message .message {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--dark);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons .icon {
+  border-radius: 0.125rem;
+  padding: 0.75rem;
+  border: none;
+  background-color: transparent;
+  margin-left: 8px;
+}
+
+.social-icons .icon svg {
+  height: 1.25rem;
+  width: 1.25rem;
+  fill: var(--dark);
+}
+
+.signup {
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--dark);
 }
