@@ -1,12 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import { lazy } from "react";
-
-const Home = lazy(() => import("../pages/Home"));
-const Login = lazy(() => import("../pages/Logiin"));
-const Register = lazy(() => import("../pages/Register"));
-const Annonce = lazy(() => import("../api/organizer/getAnnonce"));
-const CreateAnnonce = lazy(() => import("../api/organizer/createAnnonce"));
-const UpdateAnnonce = lazy(() => import("../api/organizer/updateAnnonce"));
+import Home from "../pages/Home";
+import Login from "../pages/Logiin";
+import Register from "../pages/Register";
+import Annonce from "../api/organizer/getAnnonce";
+import CreateAnnonce from "../api/organizer/createAnnonce";
+import UpdateAnnonce from "../api/organizer/updateAnnonce";
+import Dashboard from "../api/organizer/dashboard";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/updateAnnonce",
     element: <UpdateAnnonce />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />
   }
 ]);
 

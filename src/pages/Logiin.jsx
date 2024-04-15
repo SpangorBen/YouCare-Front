@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { jwtDecode } from "jwt-decode";
+
 
 const Login = () => {
     const [loginData, setLoginData] = useState({
@@ -34,7 +36,18 @@ const Login = () => {
         sessionStorage.setItem('token', token);
         sessionStorage.setItem('logged', true);
 
-        navigate(`/`);
+        const decodedToken = jwtDecode(token);
+        const role = decodedToken.role;
+
+        if (role === 'admin') {
+            navigate(`/annonce`);
+        } if (role === 'volunteer') {
+            navigate(`/`);
+        } if (role === 'organizer') {
+            navigate(`/register`);
+        }
+
+        // navigate(`/`);
 
     };
 
@@ -99,7 +112,7 @@ const Login = () => {
                     </a>
                 </div>
                 <p className="signup">Don't have an account?
-                    <Link to='/signup'>Sign up</Link>
+                    <Link to='/register'>Sign up</Link>
                 </p>
             </div>
         </div>
